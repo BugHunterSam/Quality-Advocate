@@ -1,4 +1,14 @@
-# Chapter 3
+# Why Bother Testing?
+
+There's two types of testers that people easily understand; the technical tester and the product focused tester.
+
+Becoming a technical tester
+
+Becoming a product focused tester
+
+Now there are other types out there, see James Bach blog post on 7 different types of testers
+
+NOTE: Keeping tutorial content here
 
 We hope this manuscript contains all the basic things you need to know to get started writing a book using Leanpub-Flavored Markdown.
 

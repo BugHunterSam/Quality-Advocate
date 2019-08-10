@@ -1,3 +1,9 @@
-chapter1.txt
-chapter2.txt
-chapter3.txt
+Intro.txt
+WhatIsShiftLeft.txt
+WhyBotherTesting.txt
+ATestStrategy.txt
+JustStartingInYourCareer.txt
+ContinuousIntegrationOrTesting.txt
+MidCareer.txt
+Leadership.txt
+UltimateShiftLeft.txt

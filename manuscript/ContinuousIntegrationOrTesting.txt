@@ -1,0 +1,3 @@
+# Continuous Integration/Testing
+
+it's a thing you should learn, blah blah, lot's of other people have written smarter words than me

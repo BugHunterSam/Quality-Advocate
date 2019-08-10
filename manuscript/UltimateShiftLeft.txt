@@ -1,0 +1,5 @@
+# Ultimate Shift Left
+
+No this is a bit tongue in check, but I think the ultimate shift left is actually in the design phase, not in the software build phase.
+
+However you can choose to shift your mindset in anyway you like? Do you wnat to shift right? Maybe et more involved with DevOps and monitoring in production. What would Shift upside down look like?

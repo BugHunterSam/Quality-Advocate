@@ -1,4 +1,8 @@
-# Chapter 2
+# What is Shift Left?
+
+blah blah, building quality in earlier
+
+NOTE: keeping tutorial stuff here
 
 To start a new paragraph, hit the return key twice. You want to create a blank line between paragraphs.
 
