@@ -7,3 +7,4 @@ ContinuousIntegrationOrTesting.txt
 MidCareer.txt
 Leadership.txt
 UltimateShiftLeft.txt
+ShortfallsOfShiftLeft.txt

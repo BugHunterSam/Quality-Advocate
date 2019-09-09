@@ -1,0 +1,3 @@
+# Shortfalls of Shiftleft 
+
+So it's all well and good to shift left but there are some situations or contexts where it might not work for you.
