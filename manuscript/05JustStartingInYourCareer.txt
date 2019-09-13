@@ -1,5 +1,61 @@
 # Just starting out
 
-What is exploratory testing?
+## What is exploratory testing?
 
-Visual Risk for UI automation
+## Becoming a technical tester
+
+If you consider yourself a manual tester and are concerned automation is coming for your job here are my tips for remaining relevant. 
+PROTIP it doesn't involve learning how to code. These 5 skills have served me better in my career than any automation framework.
+No matter what your background, if you follow these steps you will be more hands on technical than I was when I first graduated from Computer Science at Uni.
+
+### 1. Get comfortable with the command line
+This is so fundamental. I use this skill nearly every single day without even thinking about it. E.g. my morning starts out with checking out the latest code for our android app using a git command from the command line. Every other step proposed in this guide can all be done from the command line. You can even do all of your emailing from the command line, this blew my mind when I discovered this.
+
+I’m biased towards using a linux/unix based system (Ubuntu, Android and macOS are the main ones I use). You can learn this on windows but the transition from windows to linux/unix is hard, for example the slashes for file directories are the WRONG WAY in window.
+
+screenshot of a terminal session on macOS
+You can access the command line with an application called “Terminal” on macOS. Here is an example where I list the files on my Desktop with the command LS. I can see all of the screenshots that I’ve captured for testing. I have my terminal set up in bright green font because it makes me feel more like a hardcore hacker. Want to feel like a hacker? go to http://hackertyper.com/ and start typing gibberish.
+e.g. To change the directory linux/unix
+cd /usr/home/some/folder
+that just feels nice, natural, it’s also the same direction as the slashes in your browser address bar. Just look up ^ ^.
+
+For windows its
+CD C:\user\some\folder
+GARRH I feel like pulling out my hair, why do you do this to me windows?
+
+If you want to explore linux/unix commands on windows you can:
+
+install the git bash client
+or try terminas, a web game for learning linux commands
+or try vim adventures for learning how to edit text files from the command line
+Let me tell you a secret, I didn’t learn this skill until I was 2 years into my testing career when I started working at Tyro and every developer computer was running Ubuntu. The first thing I learned was how to CAT logs for a test environment. I studied computer science, you’d think I’d learn this skill there but nope I breezed through uni without ever learning how to change the directory from the command line.
+
+You don’t need to memorize all of the linux commands but learning how to change a directory, make a file, move that file, edit a file and search a file (probably by using a grep pipeline command) is all you need to get started. Learning how to read a help file to understand all of those pesky characters will also help. I found help files intimidating. Heck I still find them intimidating and I prefer to google an example than to try to make sense of a help file.
+
+### 2. Learn Git
+Now you don’t need to know how to code or have a coding project idea to learn this. For Example, you can just put together a wiki of your favorite resources. Like my amazing colleague Paul Maxwell Walters who put together this list of testing learning resources. You could easily learn how to add a bunch of Testers twitter handles to that project, Paul would appreciate the help. Here are some resources for learning git. You just need to learn a few basic git commands (PULL, CHECKOUT, COMMIT, BRANCH are the ones I use 80% of the time),
+
+Here is another secret; I don’t really understand git, I just know enough in how to use it. If I get stuck I always fall back onto a git hard reset to head but I always have to google the structure of that command. Stack overflow is your friend.
+
+### 3. Learn a query language
+Learning how to construct SQL queries was one of the first technical skills I picked up on the job and I have used it in every single role since. Again I didn’t learn this at uni. It was hands on experience that taught me this. MySQL is a common query language (it’s open source too). You can also construct MySQL statements from the command line. E.G. I’m working on a poo diary app to teach myself mobile development and google cloud. I have a MySQL test database set up and when I query the database from the command line this is what I get back:
+
+mysql query example
+
+Now you don’t need to learn everything, just learning how to do a simple SELECT WHERE {Conditions} will get you far. I use this type of query 80% of the time. Maybe learning how to update an entry and how to do a query across multiple tables will also help. You don’t need to be a database master. Here is a follow up blog post on this topic.
+
+### 4. Learn how the internet works
+I’m talking about learning about API’s, REST requests and JSON payloads. You should learn how network requests work; how servers talk to each other using the internet. Again you can learn this by using the command line and googleing a few resources. If you are exploring a new API, learning how to construct a simple GET request using a CURL command will get you far. Learning how to do a GET, POST or a DELETE request will be 80% of any API testing tool out there (e.g. Swagger, restlet or postman).
+
+Learning about how requests work will naturally open up the door to using performance testing tools or security testing tools. Learning this is a good foundation for more technical testing practices. You can also use developer debugging tools for browsers; Firefox & Chrome to monitor network traffic or to explore API’s. If you can mostly understand what this stack overflow question is about then you already have a good foundation here. Joe Colantonio has an awesome resource which has a section for learning about API’s right up the top.
+
+### 5. Start a learning project
+I often start new projects with the focus on learning. I wanted to learn some arduino skills, so I researched open source robots and built a tapster robot which can be used for mobile testing:
+
+Now, it’s nearly impossible to find a practical use case for Tappy McTapFace, but building this robot has helped me learn a great deal and I’ve been able to demo this robot all over the world. That’s pretty cool.
+
+My next project is a poo diary app. I want to learn how to do mobile app development, how to integrate mobile apps with google cloud/firebase and how to build an API in Java that talks to a MySQL database backend. The app itself is a little silly (some would say it’s crap – pun intended) but I’m using it as a learning tool. I’m mostly just following tutorials on the internet and it’s glorified copy paste work with a little bit of thinking. However with the 4 foundations listed here and studying Java at uni it doesn’t seem all that hard.
+
+Do you consider yourself to be technical? What’s your next step in improving your technical skills?
+
+## Visual Risk for UI automation
