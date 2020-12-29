@@ -2,8 +2,19 @@
 
 Thank you for picking up this book. Hopefully you are here to learn more about the art of software testing. You might be a developer early on in your career, or a test lead trying to scale a team quality mindset or a product manager helping a team with a new project. If you work with software and are interested in deliverying quality products, there's something for you in this book.
 
-You don't need to read this book from start to finish. Pick a chapter, skim through and try to practice something new in your work or share an idea with a colleague. This book is about helping you collaborate with your team. Even though this book is about software testing, there won't be a huge amount of technical detail. This book is more "hints and tips" for thinking about testing over a technical deep dive.
+You don't need to read this book from start to finish. Pick a chapter, skim through and try to practice something new in your work or share an idea with a colleague. This book is about helping you collaborate with your team. I personally rarely finish reading any technical book, so please don't feel bad for "not reading everything".
 
+Even though this book is about software testing, there won't be a huge amount of technical detail. This book is more "hints and tips" for thinking about testing over a technical deep dive.
+
+All of the examples in this book are from my own career in tech and interactions from the wider testing community. I've been a software tester of some description for 9 years and have worked accross a variety of industries and products. My specialty is mobile apps and finance and many of my examples are specific to these fields. You will find my examples are applicable to many other fields.
+
+If you are early on in your career you could start with chapter X, what are mind maps, exploratory testing skills, how to write a bug report, etc etc.
+
+If you are mid career start with chapter X, topics include how to run a bug bash, imrpoving technical skills and blah.
+
+If you are a lead or in a senior role start with chapter x; topics include quality coaching, etc, etc.
+
+TODO: Cleanup Intro
 Who is this book for?
 Structure? How to use this book?
 Highlights?
