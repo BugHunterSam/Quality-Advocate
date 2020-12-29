@@ -1,5 +1,9 @@
 # Intro
 
+Thank you for picking up this book. Hopefully you are here to learn more about the art of software testing. You might be a developer early on in your career, or a test lead trying to scale a team quality mindset or a product manager helping a team with a new project. If you work with software and are interested in deliverying quality products, there's something for you in this book.
+
+You don't need to read this book from start to finish. Pick a chapter, skim through and try to practice something new in your work or share an idea with a colleague. This book is about helping you collaborate with your team. Even though this book is about software testing, there won't be a huge amount of technical detail. This book is more "hints and tips" for thinking about testing over a technical deep dive.
+
 Who is this book for?
 Structure? How to use this book?
 Highlights?
