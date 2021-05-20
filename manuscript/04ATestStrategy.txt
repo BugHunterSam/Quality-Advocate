@@ -2,46 +2,46 @@
 
 Test strategy, what a funny concept. (TODO: add history of strategy)
 
-This chapter is an overview of a test strategy I've used in a mobile app team in the finance sector. Now this strategy isnít going to help me win any battles but it helped us deliver a new app to the app store, iterate based on customer feedback, exceeded our expectations and was well reviewed.
+This chapter is an overview of a test strategy I've used in a mobile app team in the finance sector. Now this strategy isn‚Äôt going to help me win any battles but it helped us deliver a new app to the app store, iterate based on customer feedback, exceeded our expectations and was well reviewed.
 
 *disclaimer: what worked for my team might not work for yours. People are amazingly diverse and your team and company context is fundamentally different. This strategy was subject to change as we learnt and evolved.
 
-Context
-First letís set the scene. Our scrum team includes a Android developer, an iOS developer, two back end developers, two business analysts (one is also a semi-scrum master), two test engineers, a product manager, a designer and a tech lead. 
+## Context
+First let‚Äôs set the scene. Our scrum team includes a Android developer, an iOS developer, two back end developers, two business analysts (one is also a semi-scrum master), two test engineers, a product manager, a designer and a tech lead. 
 
 There are a few people involved with our team but are also accross a few different projects. There's a project manager who's across web and mobile, a solutions architect and a test lead.
 
 We have a 10 day sprint cycle that looks a little like this:
 
 
-We have a daily standup, a few kick off meetings at the start of the sprint to lock in what we are working on for the next 2 weeks, some mid sprint review/next sprint refinement sessions and a few meetings at the end that help tie up what weíve completed. Consider this a crash course in Scrum Agile if you will. Not everyone is required to attend all of these meetings and I wonít be covering these meetings in detail in this blog post.
+We have a daily standup, a few kick off meetings at the start of the sprint to lock in what we are working on for the next 2 weeks, some mid sprint review/next sprint refinement sessions and a few meetings at the end that help tie up what we‚Äôve completed. Consider this a crash course in Scrum Agile if you will. Not everyone is required to attend all of these meetings and I won‚Äôt be covering these meetings in detail in this blog post.
 
 Get to the Test Strategy
-Yes I know, that was a rambling tangent but the context is important. Before I get into the good bits Iíll ask you a question;
+Yes I know, that was a rambling tangent but the context is important. Before I get into the good bits I‚Äôll ask you a question;
 
 Why do we even bother with testing?
 
-Some people say, ìto ensure the product works as expectedî or, ìto find bugsî, ìitís my job to test thingsî and these are all ok answers but they miss the point a little. Hereís my answer:
+Some people say, ‚Äúto ensure the product works as expected‚Äù or, ‚Äúto find bugs‚Äù, ‚Äúit‚Äôs my job to test things‚Äù and these are all ok answers but they miss the point a little. Here‚Äôs my answer:
 
-We test to get feedback on the state of the product. To help us answer the question, ìare there any known risks with shipping this product to production?î
+We test to get feedback on the state of the product. To help us answer the question, ‚Äúare there any known risks with shipping this product to production?‚Äù
 
 Paraphrased from conversations with Michael Bolton, the tester not the singer
 Every part of the following strategy is all tied into facilitating feedback. The more timely and accurate the feedback the better.
 
-Testing and quality is a team responsibility, itís not just up to one person to be the quality gate keeper. My role is to help facilitate feedback
+Testing and quality is a team responsibility, it‚Äôs not just up to one person to be the quality gate keeper. My role is to help facilitate feedback
 
 Layer One: The product design feedback loop
 
 This is all a little out of scope of my teams day to day activities but this how our design team tests if we are building the right thing that users need.
 
 User/Product Research
-This might involve researching our market for current trends. How many of our customers care about their superannuation? What is their financial literacy? What typeís of problems are they facing? What are our competitors doing and how does their experience deliver value?
+This might involve researching our market for current trends. How many of our customers care about their superannuation? What is their financial literacy? What type‚Äôs of problems are they facing? What are our competitors doing and how does their experience deliver value?
 
 Wireframe/Design prototyping
-Eventually someone will need to start sketching out some design ideas. Whatís the user flow through a particular feature?
+Eventually someone will need to start sketching out some design ideas. What‚Äôs the user flow through a particular feature?
 
 User Testing
-This wonít happen for every new design, for example log in hasnít gone through this process. Our new big features will go through this type of testing. This helps get feedback on the design and layout. Does it all make sense?
+This won‚Äôt happen for every new design, for example log in hasn‚Äôt gone through this process. Our new big features will go through this type of testing. This helps get feedback on the design and layout. Does it all make sense?
 
 Design and user story creation
 Out of all of the work, eventually the design team and the business analyst will work together to create acceptance criteria, refine the UI and get the rest of the team up to speed with the context of a feature. Our user stories and designs are usually shared on a confluence page and linked to Jira tasks. We use a GIVEN WHEN THEN structure for our user stories.
@@ -49,64 +49,64 @@ Out of all of the work, eventually the design team and the business analyst will
 Layer Two: The code feedback loop
 
 Exploratory Testing
-All testing is exploratory in nature, its front and centre. Itís across everything we do. chaos engineering is a type of it as well as building the code locally. We use our skills, plans and judgement to determine when and how much testing is needed at any point.
+All testing is exploratory in nature, its front and centre. It‚Äôs across everything we do. chaos engineering is a type of it as well as building the code locally. We use our skills, plans and judgement to determine when and how much testing is needed at any point.
 
 Experience Testing
 When we do the code review we will do exploratory testing based on the risk of the feature. Time boxed to a session or two depending on what has been built. We will look at the user stories, brain storm any more edge cases and consider if they are worth testing. Checking if the experience of the feature makes sense and if there are any ways people can get into some sticky unexpected situations.
 
 Unit Tests
-As a developer builds a feature, they will create unit tests based on the user acceptance criteria. Developers will use the tools they are most comfortable with the write these tests. If youíd like to read more Martin Fowler has this blog post on Unit Testing.
+As a developer builds a feature, they will create unit tests based on the user acceptance criteria. Developers will use the tools they are most comfortable with the write these tests. If you‚Äôd like to read more Martin Fowler has this blog post on Unit Testing.
 
 UI Automation
 
-Hereís a visual risk for UI automation board; each feature is mapped against customer impact vs frequency of use
+Here‚Äôs a visual risk for UI automation board; each feature is mapped against customer impact vs frequency of use
 I have my visual risk board next to our team which we use to prioritise how much testing we build at this layer. We use Espresso for Android and XCUITest for the iOS app.
 
-ìWhy not Appium?î, I hear you ask
-Simple, when test code lives in a repository outside of your production code, you decrease collaboration with the whole team. Also you canít easily run your appium tests during pre commit testing or locally as a developer. You can follow the interactive visual risk for UI automation exercise here to understand more.
+‚ÄúWhy not Appium?‚Äù, I hear you ask
+Simple, when test code lives in a repository outside of your production code, you decrease collaboration with the whole team. Also you can‚Äôt easily run your appium tests during pre commit testing or locally as a developer. You can follow the interactive visual risk for UI automation exercise here to understand more.
 
 Code Review
-When a new API is being developed, Iíll often pair with the developer to do a code review. We will talk about the architecture, brain storm testing ideas, do a bit of testing (usually through postman if we are testing an API), we will chat about test coverage. Is it adequate? Is there any thing missing? Can we see the tests fail under the expected conditions?
+When a new API is being developed, I‚Äôll often pair with the developer to do a code review. We will talk about the architecture, brain storm testing ideas, do a bit of testing (usually through postman if we are testing an API), we will chat about test coverage. Is it adequate? Is there any thing missing? Can we see the tests fail under the expected conditions?
 
-If itís a front end feature, Iíll check out the code locally and use a different emulator/simulator than what the developer uses. Iíll give the feature a good shake out and check the test coverage. Iíll also test for accessibility if itís a new front end feature.
+If it‚Äôs a front end feature, I‚Äôll check out the code locally and use a different emulator/simulator than what the developer uses. I‚Äôll give the feature a good shake out and check the test coverage. I‚Äôll also test for accessibility if it‚Äôs a new front end feature.
 
 Mock Testing
-For our mobile app, we are able to do most of our code review testing without ever talking to a backend. The engineers have built some mock servers into out apps, when the app would call an API, our mock server returns a canned response. This helps us test that the UI and the flow hangs together even when test environments arenít available. If youíd like to read more, check out this article on mock testing for android or this one for iOS.
+For our mobile app, we are able to do most of our code review testing without ever talking to a backend. The engineers have built some mock servers into out apps, when the app would call an API, our mock server returns a canned response. This helps us test that the UI and the flow hangs together even when test environments aren‚Äôt available. If you‚Äôd like to read more, check out this article on mock testing for android or this one for iOS.
 
 Build Pipelines
-We have different pipelines for different applications. We are using TeamCity as our Continuous Integration tool. Generally all of our unit tests and UI tests will be run. Maybe our contract tests. I have a few other ideas to increase the value from our build pipelines that Iíll talk about in Chaos Testing. If our main builds start failing, we wonít release the software.
+We have different pipelines for different applications. We are using TeamCity as our Continuous Integration tool. Generally all of our unit tests and UI tests will be run. Maybe our contract tests. I have a few other ideas to increase the value from our build pipelines that I‚Äôll talk about in Chaos Testing. If our main builds start failing, we won‚Äôt release the software.
 
 Device Coverage
-We donít necessarily focus on doing device testing for each feature that comes through. I try to pick a different emulator/simulator than what the developers do. I always make sure features get tested on a Samsung. Some features, if they are 3 star features from our risk analyst we will spend more time testing on a wide variety of devices. We currently have an on premise mobile device cloud server delivered by Mobile Labs. If you donít have a device cloud, you could set up your own device farm.
+We don‚Äôt necessarily focus on doing device testing for each feature that comes through. I try to pick a different emulator/simulator than what the developers do. I always make sure features get tested on a Samsung. Some features, if they are 3 star features from our risk analyst we will spend more time testing on a wide variety of devices. We currently have an on premise mobile device cloud server delivered by Mobile Labs. If you don‚Äôt have a device cloud, you could set up your own device farm.
 
 Why Samsung?
-Samsung has a wide market saturation and they always do funky stuff to the android UI. The android emulators are awesome at vanilla android. However, most people out there arenít using vanilla Android :(.
+Samsung has a wide market saturation and they always do funky stuff to the android UI. The android emulators are awesome at vanilla android. However, most people out there aren‚Äôt using vanilla Android :(.
 
 Contract Testing
-We are moving towards having contract testing in place that lets us know if an API starts to break, if someone changes the JSON payload in an API our contract will break and someone will know the have more stuff to clean up. We donít have contract testing for our mobile app yet but some of our downstream micro services are starting to build these. If youíd like to find more, read this article by Martin Fowler.
+We are moving towards having contract testing in place that lets us know if an API starts to break, if someone changes the JSON payload in an API our contract will break and someone will know the have more stuff to clean up. We don‚Äôt have contract testing for our mobile app yet but some of our downstream micro services are starting to build these. If you‚Äôd like to find more, read this article by Martin Fowler.
 
 Test Environment
-We have an integration test environment where our code is being constantly deployed into. Sometimes it can mean an API is down because itís being deployed. We do a lot of our API testing in this environment.
+We have an integration test environment where our code is being constantly deployed into. Sometimes it can mean an API is down because it‚Äôs being deployed. We do a lot of our API testing in this environment.
 
 Chaos/Crash Testing
-With android thereís this command line tool called chaos monkey. This tool is a UI exerciser, it throws random user input at your UI to try and find where it crashes. Iím hoping to include this in a build pipeline for an overnight build. Run it for a few hours on an android device and see if it crashes. The next night, do the same thing but on a different device/os combination. This will give us reasonable device testing over a sprint. I donít know of a similar tool for iOS. You can read more about chaos engineering on wikipedia.
+With android there‚Äôs this command line tool called chaos monkey. This tool is a UI exerciser, it throws random user input at your UI to try and find where it crashes. I‚Äôm hoping to include this in a build pipeline for an overnight build. Run it for a few hours on an android device and see if it crashes. The next night, do the same thing but on a different device/os combination. This will give us reasonable device testing over a sprint. I don‚Äôt know of a similar tool for iOS. You can read more about chaos engineering on wikipedia.
 
 Layer Three: Shipping the product feedback loop
 
 Bug bash
-A few days before the end of the sprint, our team and invited guests will sit down and do some exploratory testing on the features that have just been built. If anyone wants to explore a new API thatís been built, they can. If theyíve had their head in unit tests lately, they have the chance to explore some of the new UI. You can read how to run a bug bash to find out more. If major bugs are found here we wonít release the software. We might do a mob programming session when we donít have enough features for a bug bash.
+A few days before the end of the sprint, our team and invited guests will sit down and do some exploratory testing on the features that have just been built. If anyone wants to explore a new API that‚Äôs been built, they can. If they‚Äôve had their head in unit tests lately, they have the chance to explore some of the new UI. You can read how to run a bug bash to find out more. If major bugs are found here we won‚Äôt release the software. We might do a mob programming session when we don‚Äôt have enough features for a bug bash.
 
 Demo
 On the last day of the sprint we will demo our features to a broader audience. Feedback is gathered and turned into Jira items/research for the design team.
 
 Internal release
-Then we release to internal staff members. Many other companies call this ìeating your own dog foodî. This gives people the chance to raise more feedback before we put the product in front of customers. You can read more on wikipedia here.
+Then we release to internal staff members. Many other companies call this ‚Äúeating your own dog food‚Äù. This gives people the chance to raise more feedback before we put the product in front of customers. You can read more on wikipedia here.
 
 Beta Release
 We can release our app to our high value or digitally savvy customers who want to ahead of the curve. This is a customer engagement strategy as well as a test strategy.
 
 Percentage roll outs
-The google play store allows you to do percentage rollouts. Say you rollout to 5% on the new version, monitor production for any new crashes or customers complaining. If itís all smooth for a few days you can continue the rollout to 50% and then 100%. The google play store allows you to roll back if major bugs do occur. The apple play store has a similar feature.
+The google play store allows you to do percentage rollouts. Say you rollout to 5% on the new version, monitor production for any new crashes or customers complaining. If it‚Äôs all smooth for a few days you can continue the rollout to 50% and then 100%. The google play store allows you to roll back if major bugs do occur. The apple play store has a similar feature.
 
 Monitoring in production
 What metrics should be communicated back to the team? How can we respond to issues in production? I like this quote from a 5 minute google talk back in 2007:
@@ -118,7 +118,7 @@ Ed Keyes
 Layer Four: Supporting the product feedback loop
 
 Supporting devices
-We should support all of the devices that 80% of our market uses. We will be support from Android 6 (marsh-mellow) and from iOS 11. There probably will be some obscure android devices out there that donít play nice with our app. Android is a beast like that.
+We should support all of the devices that 80% of our market uses. We will be support from Android 6 (marsh-mellow) and from iOS 11. There probably will be some obscure android devices out there that don‚Äôt play nice with our app. Android is a beast like that.
 
 Facilitating customer feedback
 There will be an easy way for customers to provide feedback in app. I have some ideas on how to make that experience better but there are privacy concerns to consider. We will also be monitoring our google/apple play store reviews for bugs.
@@ -130,17 +130,17 @@ Soap Opera Testing
 Maybe in the future, we could try some soap opera testing with the business? Soap opera testing is a condensed and over dramatised approach to testing. What are the wackiest scenarios our customers have actually tried? How does our system break? You can read more about this exercise here.
 
 Why the layers?
-Consider each of these layers like a net. It wonít catch everything, bugs in production will still happen. But when we have all of these feedback loops layered on top of each other, we get a pretty tight net, where hopefully no major issues get into production.
+Consider each of these layers like a net. It won‚Äôt catch everything, bugs in production will still happen. But when we have all of these feedback loops layered on top of each other, we get a pretty tight net, where hopefully no major issues get into production.
 
 What about auditing or compliance?
 Our source of truth is the code, Jira and Confluence. When we have all of it integrated, we can prove we tested a feature thoroughly without too much extra overhead. An auditors mindset and a testers mindset are very similar. Testers are concerned with product risks, auditors are concerned with business risk.
 
-Their main question is, ìdid you do what you say you do? Did you follow your process?î and, ìIs the existing process adequate?î.
+Their main question is, ‚Äúdid you do what you say you do? Did you follow your process?‚Äù and, ‚ÄúIs the existing process adequate?‚Äù.
 
 Where are your test cases?
-Michael Bolton has a 7 part series on breaking the test case addiction. You can read series one here. You donít need test cases to prove you did adequate testing. They create unnecessary overhead that detract from adding business value.
+Michael Bolton has a 7 part series on breaking the test case addiction. You can read series one here. You don‚Äôt need test cases to prove you did adequate testing. They create unnecessary overhead that detract from adding business value.
 
 What else is missing?
-Security testing is not included in this test strategy. Neither is performance testing. Getting these included can be challenging. Iím open to your suggestions in how I can incorporate this type of feedback in a timely manner.
+Security testing is not included in this test strategy. Neither is performance testing. Getting these included can be challenging. I‚Äôm open to your suggestions in how I can incorporate this type of feedback in a timely manner.
 
 What else would you add to your test strategy?
