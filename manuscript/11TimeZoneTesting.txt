@@ -1,0 +1,48 @@
+#Time zone testing considerations
+I’m going to restart my live streaming on twitch this weekend. The idea being; live pair testing with developers/testers from all over the world. We pick a website/product or tool for an exploratory testing session and talk about our testing process.
+
+This here was my original infographic that I created for my twitch channel to try and pair up Australia, India, UK and US time zones. The goal was the live stream on 3 sessions that would include 2 other countries at the same time.
+
+
+However this infographic is now wrong because daylight savings has finished in Australia but now started in other parts of the world.
+
+This blog post is a deep dive into international time zones and scheduling. Thanks to Ashwini for the idea for this blog post.
+
+I’m focusing on english speaking parts of the world because they are the most visitors to my blog:
+
+
+##Aussie time zones
+I live in Sydney, Australia. My time zone is UTC + 10 (AEST), unless it’s daylight savings then it’s UTC + 11 (AEDT). However not every state has daylight savings, Queensland doesn’t follow daylight savings, so it’s 1 hour behind Sydney for half the year. Oh and Adelaide is 1/2 an hour behind Sydney and Perth is 2 hours behind.
+
+India time zone (IST)
+Even though India is a large country, they only have 1 time zone. India Standard Time (IST), which is UTC + 05:30. But India doesn’t follow daylight savings time. So in summer my lunchtime (12PM AEDT) is 6:30 AM IST. Whereas in winter my lunchtime (12PM AEST) is 7:30 AM IST. So in my winter (India’s summer) it’s slightly easier for Australians to organise meetings with our Indian colleagues.
+
+UK GMT
+The good old UK follows the Greenwich Mean Time, the basis for what our time zones are based off. This is UTC + 0. But the follow BST time (British Summer time) UTC + 1 during their summer.
+
+However Britain and Australia do not switch their daylight savings over in the same week. There’s normally 9 to 11 hours difference between Sydney and London depending on what time of year it is but a period of 10 hours difference when one country has changed daylight savings and the other hasn’t (a period of 3 weeks twice a year).
+
+Note: I think my maths is wrong because I’m starting to get confused. See this post from Bob in Oz for a handy conversion table.
+
+US time zones
+There are 2 main US time zones that I try to cater for. PST UTC – 8 (think west coast/California side) and EST UTC – 5 (east coast, new york side).
+
+There’s currently 14 hours between Sydney and New York and 17 hours between Sydney and Silicon Valley. It’s 16 and 19 hours difference respectively during my summer.
+
+Updated time zone chart
+So, if I update that previous infographic for aussie winter time I get the following:
+
+
+It’s a little harder to hit 2 other time zones that also play nice with my own time zone 🙁 . Also both of these infographics would be wrong when daylight savings is changing in one place but not the other.
+
+If I was trying to coordinate a meeting between a British colleague and an Indian colleague, I’d propose 7:30 PM my time, which would be 3 PM for the Indian and 10:30 AM for the Brit.
+
+Time zones are hard
+So I’m going to leave you with this computerphile video; The Problem with Time & Time zones:
+
+
+I like to use Calendly to book people in for online chats. It manages all of the time zone coordination for me. If you look at my calendar (e.g. my presentation coaching booking link), it will default to your local time zone.
+
+If you’d like to read more about time related bugs, this Y2K bug in the year 2038 would be a good next read.
+
+Have you ever had any time zone bugs come up in your workplace?
